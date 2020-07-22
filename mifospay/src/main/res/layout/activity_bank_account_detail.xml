@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.design.widget.AppBarLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <include layout="@layout/toolbar"/>
 
-        </android.support.design.widget.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,30 +34,35 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextSecondary"
                     android:text="@string/bank_name"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
+                    android:textColor="@color/colorTextSecondary"
                     android:text="@string/ac_holder_name"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
+                    android:textColor="@color/colorTextSecondary"
                     android:text="@string/branch_name"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
+                    android:textColor="@color/colorTextSecondary"
                     android:text="@string/ifsc"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
+                    android:textColor="@color/colorTextSecondary"
                     android:text="@string/type"/>
 
             </LinearLayout>
@@ -69,35 +76,35 @@
                     android:id="@+id/tv_bank_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/grey_900"/>
+                    android:textColor="@color/colorTextPrimary"/>
 
                 <TextView
                     android:id="@+id/tv_account_holder_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
-                    android:textColor="@color/grey_900"/>
+                    android:textColor="@color/colorTextPrimary"/>
 
                 <TextView
                     android:id="@+id/tv_branch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
-                    android:textColor="@color/grey_900"/>
+                    android:textColor="@color/colorTextPrimary"/>
 
                 <TextView
                     android:id="@+id/tv_ifsc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
-                    android:textColor="@color/grey_900"/>
+                    android:textColor="@color/colorTextPrimary"/>
 
                 <TextView
                     android:id="@+id/tv_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
-                    android:textColor="@color/grey_900"/>
+                    android:textColor="@color/colorTextPrimary"/>
 
             </LinearLayout>
 
@@ -124,10 +131,11 @@
             android:orientation="vertical"
             android:padding="@dimen/value_20dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_change_upi_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorCardBackground"
                 app:cardElevation="1dp"
                 app:cardUseCompatPadding="true">
 
@@ -136,16 +144,17 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/value_20dp"
                     android:text="@string/change_upi_pin"
-                    android:textColor="@color/grey_900"
+                    android:textColor="@color/colorTextPrimary"
                     android:textSize="17sp"/>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_forgot_upi_pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/value_20dp"
+                app:cardBackgroundColor="@color/colorCardBackground"
                 app:cardElevation="1dp"
                 app:cardUseCompatPadding="true">
 
@@ -154,16 +163,17 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/value_20dp"
                     android:text="@string/forgot_upi_pin"
-                    android:textColor="@color/grey_900"
+                    android:textColor="@color/colorTextPrimary"
                     android:textSize="17sp"/>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_delete_bank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/value_20dp"
+                app:cardBackgroundColor="@color/colorCardBackground"
                 app:cardElevation="1dp"
                 app:cardUseCompatPadding="true">
 
@@ -172,10 +182,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/value_20dp"
                     android:text="@string/delete_bank"
-                    android:textColor="@color/grey_900"
+                    android:textColor="@color/colorTextPrimary"
                     android:textSize="17sp"/>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

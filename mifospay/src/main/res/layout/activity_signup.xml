@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:id="@+id/rr_container"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent">
 
     <ScrollView android:layout_width="match_parent"
@@ -13,12 +14,12 @@
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
-            <android.support.design.widget.AppBarLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primaryDarkBlue">
 
-                <android.support.v7.widget.Toolbar
+                <androidx.appcompat.widget.Toolbar
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/toolbar"
@@ -57,7 +58,7 @@
 
                 </LinearLayout>
 
-            </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
 
             <LinearLayout
@@ -76,6 +77,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/first_name"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -87,6 +90,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/last_name"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -98,27 +103,32 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/username"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/etPasswordLayout"
                     android:background="@drawable/bg_et_round_border"
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
+                    android:textColorHint="@color/colorTextSecondary"
+                    app:passwordToggleTint="@color/colorTextSecondary"
                     app:passwordToggleEnabled="true">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_password"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:hint="@string/password"
+                        android:textColor="@color/colorTextPrimary"
                         android:inputType="textPassword"/>
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
                 <ProgressBar
                     android:layout_width="match_parent"
                     android:id="@+id/pb_password_strength"
@@ -131,27 +141,31 @@
                     android:id="@+id/tv_password_strength"
                     android:gravity="center"
                     android:visibility="gone"
+                    android:textColor="@color/colorTextPrimary"
                     android:layout_marginBottom="8dp"
                     android:layout_height="wrap_content" />
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/etPasswordLayout2"
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:background="@drawable/bg_et_round_border"
+                    android:textColorHint="@color/colorTextSecondary"
                     android:layout_marginBottom="10dp"
+                    app:passwordToggleTint="@color/colorTextSecondary"
                     app:passwordToggleEnabled="true">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_confirm_password"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:hint="@string/confirm_password"
+                        android:textColor="@color/colorTextPrimary"
                         android:inputType="textPassword"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"/>
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
                 <EditText
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
@@ -159,6 +173,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/email"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="textEmailAddress"
                     android:paddingLeft="15dp"/>
 
@@ -169,6 +185,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/name_of_business"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
@@ -181,6 +199,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/address_line_1"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -192,6 +212,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/address_line_2"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -204,6 +226,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_et_round_border"
                     android:hint="@string/pin_code"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="number"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -219,6 +243,8 @@
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:hint="@string/state"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"/>
@@ -229,7 +255,7 @@
 
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

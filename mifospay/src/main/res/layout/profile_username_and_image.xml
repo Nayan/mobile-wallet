@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -27,10 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginItemsInSectionSmall"
         app:fontFamily="@font/roboto_medium"
-        android:textColor="@color/colorBlack87"
+        android:textColor="@color/colorTextPrimary"
         android:textSize="@dimen/textH6"
         app:layout_constraintEnd_toEndOf="@+id/iv_user_image"
         app:layout_constraintStart_toStartOf="@+id/iv_user_image"
         app:layout_constraintTop_toBottomOf="@+id/iv_user_image" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

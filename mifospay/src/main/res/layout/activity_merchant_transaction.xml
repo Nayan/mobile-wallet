@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <include layout="@layout/toolbar"/>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:background="@color/white"
         android:layout_height="match_parent"
         tools:context=".merchants.ui.MerchantTransferActivity">
 
@@ -24,13 +24,13 @@
             android:layout_gravity="center"
             android:visibility="visible" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_merchant_history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="175dp" />
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/nsv_merchant_bottom_sheet_dialog"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -79,7 +79,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/marginItemsInSectionSmall"
                     android:text="@string/test_user"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorTextPrimary"
                     android:textSize="@dimen/text_large" />
 
                 <TextView
@@ -89,10 +89,10 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/marginItemsInSectionSmall"
                     android:text="@string/test_vpa"
-                    android:textColor="@color/gray_dark"
+                    android:textColor="@color/colorTextSecondary"
                     android:textSize="@dimen/text_large" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edittext"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
@@ -102,19 +102,20 @@
                     android:layout_marginTop="@dimen/value_20dp"
                     android:layout_marginRight="@dimen/value_20dp"
                     android:padding="@dimen/value_10dp"
-                    android:textColorHint="@android:color/black"
+                    android:textColorHint="@color/colorTextSecondary"
                     app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_merchant_amount"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="@string/amount"
+                        android:textColor="@color/colorTextPrimary"
                         android:inputType="number"
                         android:paddingBottom="@dimen/value_20dp"
                         android:textSize="@dimen/value_15sp"
                         android:theme="@style/Theme.AppCompat.Light" />
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/btn_submit"
@@ -127,7 +128,7 @@
 
             </LinearLayout>
 
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

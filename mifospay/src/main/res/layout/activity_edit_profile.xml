@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:focusableInTouchMode="true"
     android:focusable="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         app:elevation="0dp"
         android:layout_height="wrap_content" >
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent" />
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -44,57 +44,69 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/marginTopUserProfile" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:id="@+id/til_edit_profile_username"
                     android:layout_marginTop="@dimen/marginItemsInSectionLarge"
                     android:layout_width="match_parent"
                     app:helperText="@string/username"
+                    app:helperTextTextAppearance=
+                        "@style/TextAppearance.App.TextInputLayout.HelperTextAppearance"
                     android:hint="@string/username"
+                    android:textColorHint="@color/colorTextSecondary"
                     android:layout_height="wrap_content" >
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_edit_profile_username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
                         android:inputType="text"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginTop="@dimen/marginItemsInSectionMedium"
                     android:layout_width="match_parent"
                     android:id="@+id/til_edit_profile_email"
                     app:layout_anchor="@id/til_edit_profile_username"
                     app:helperText="@string/email"
+                    app:helperTextTextAppearance=
+                        "@style/TextAppearance.App.TextInputLayout.HelperTextAppearance"
                     android:hint="@string/email"
+                    android:textColorHint="@color/colorTextSecondary"
                     android:layout_height="wrap_content" >
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_edit_profile_email"
                         android:layout_width="match_parent"
+                        android:textColor="@color/colorTextPrimary"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginTop="@dimen/marginItemsInSectionMedium"
                     android:id="@+id/til_edit_profile_vpa"
                     android:layout_width="match_parent"
                     app:helperText="@string/vpa"
+                    app:helperTextTextAppearance=
+                        "@style/TextAppearance.App.TextInputLayout.HelperTextAppearance"
                     android:hint="@string/vpa"
+                    android:textColorHint="@color/colorTextSecondary"
                     android:layout_height="wrap_content" >
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_edit_profile_vpa"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextPrimary"
                         android:inputType="text"/>
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <LinearLayout
                     android:layout_marginTop="@dimen/marginItemsInSectionMedium"
@@ -109,24 +121,29 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         app:ccp_autoDetectCountry="true"
+                        app:ccp_contentColor="@color/colorTextPrimary"
                         app:ccp_autoFormatNumber="false" />
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:id="@+id/til_edit_profile_mobile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:helperText="@string/mobile"
-                        android:hint="@string/mobile" >
+                        app:helperTextTextAppearance=
+                            "@style/TextAppearance.App.TextInputLayout.HelperTextAppearance"
+                        android:hint="@string/mobile"
+                        android:textColorHint="@color/colorTextSecondary">
 
-                        <android.support.design.widget.TextInputEditText
+                        <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_edit_profile_mobile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:maxLength="@integer/telephone_numbers_max_length_standard"
+                            android:textColor="@color/colorTextPrimary"
                             android:inputType="number" />
 
-                    </android.support.design.widget.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
@@ -150,7 +167,7 @@
 
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_edit_profile_save_changes"
         style="@style/Widget.MaterialComponents.FloatingActionButton"
         android:layout_marginRight="@dimen/paddingLayout"
@@ -166,4 +183,4 @@
         app:backgroundTint="@color/colorAccentBlack"
         app:fabSize="normal" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
