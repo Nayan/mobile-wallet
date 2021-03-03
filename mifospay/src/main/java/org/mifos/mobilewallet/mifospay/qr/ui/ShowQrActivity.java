@@ -67,12 +67,12 @@ public class ShowQrActivity extends BaseActivity implements QrContract.ShowQrVie
         ButterKnife.bind(ShowQrActivity.this);
 
         setToolbarTitle(Constants.QR_CODE);
-        showBackButton();
+        showColoredBackButton(Constants.BLACK_BACK_BUTTON);
         mPresenter.attachView(this);
 
         final String qrData = getIntent().getStringExtra(Constants.QR_DATA);
         mShowQrPresenter.generateQr(qrData);
-        tvQrData.setText(qrData);
+        tvQrData.setText(getString(R.string.vpa) + ": " + qrData);
 
         WindowManager.LayoutParams layout = getWindow().getAttributes();
         layout.screenBrightness = 1F;
@@ -149,29 +149,36 @@ public class ShowQrActivity extends BaseActivity implements QrContract.ShowQrVie
         if (mAmount != null) {
             edittext.setText(mAmount);
         }
-        editTextDialog.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        editTextDialog.setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String amount = edittext.getText().toString();
                 if (amount.equals("")) {
-                    showToast("Please enter the Amount");
+                    showToast(getString(R.string.enter_amount));
                     return;
                 } else if (Double.parseDouble(amount) <= 0) {
                     showToast(Constants.PLEASE_ENTER_VALID_AMOUNT);
                     return;
                 }
                 mAmount = amount;
-                tvQrData.setText(qrData + ", " + mAmount);
+                tvQrData.setText(getString(R.string.vpa) + ": " + qrData +
+                        "\n" + getString(R.string.amount) + ": " + mAmount);
                 generateQR(qrData + ", " + mAmount);
             }
         });
-        editTextDialog.setNeutralButton("Reset", new DialogInterface.OnClickListener() {
+        editTextDialog.setNeutralButton(R.string.reset, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mAmount = null;
-                tvQrData.setText(qrData);
+                tvQrData.setText(getString(R.string.vpa) + ": " + qrData);
                 generateQR(qrData);
                 showToast("Reset Amount Successful");
+            }
+        });
+        editTextDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
             }
         });
         editTextDialog.show();

@@ -3,6 +3,7 @@ package org.mifos.mobilewallet.mifospay.history;
 import org.mifos.mobilewallet.core.data.fineract.entity.accounts.savings.TransferDetail;
 import org.mifos.mobilewallet.core.domain.model.CheckBoxStatus;
 import org.mifos.mobilewallet.core.domain.model.Transaction;
+import org.mifos.mobilewallet.core.domain.model.TransactionType;
 import org.mifos.mobilewallet.mifospay.base.BasePresenter;
 import org.mifos.mobilewallet.mifospay.base.BaseView;
 
@@ -32,11 +33,15 @@ public interface HistoryContract {
         void showTransactionDetailDialog(int transactionIndex, String accountNumber);
 
         void showHistoryFetchingProgress();
+
+        void refreshTransactions (List<Transaction> transactions);
     }
 
     interface TransactionsHistoryPresenter extends BasePresenter {
 
         void fetchTransactions(List<CheckBoxStatus> filterList);
+
+        void filterTransactionType(TransactionType type);
 
         void handleTransactionClick(int transactionIndex);
 
