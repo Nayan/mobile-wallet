@@ -232,7 +232,6 @@ public class HistoryFragment extends BaseFragment
             public void onRefresh() {
                 getSwipeRefreshLayout().setRefreshing(false);
                 mPresenter.fetchTransactions(filterList);
-                mPresenter.fetchTransactions();
                 displayAll();
             }
         });
